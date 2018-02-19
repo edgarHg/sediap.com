@@ -1,0 +1,22 @@
+.__logoS{
+  display: block;
+  margin: 0 auto;
+  height: 100px;
+  width: 362.5px;
+  margin-top: 5px;
+}
+.da-slider {
+    width: 100%;
+    min-width: 300px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    background: url("../../../assets/images/waves.gif");
+    border-top: 8px solid #efc34a;
+    border-bottom: 8px solid #efc34a;
+    -webkit-transition: background-position 1s ease-out .3s;
+    -moz-transition: background-position 1s ease-out .3s;
+    -o-transition: background-position 1s ease-out .3s;
+    -ms-transition: background-position 1s ease-out .3s;
+    transition: background-position 1s ease-out .3s;
+}

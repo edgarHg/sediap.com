@@ -1,0 +1,89 @@
+<div id="da-slider" class="da-slider da-slider-secundario">
+    <div class="sliderContenidoVentanas">
+        <img src="images/sediap-logo.png" style="height: 100px" class="slideDown" alt="Logo SEDIAP"/>
+    </div>
+</div>
+<section class="row" ng-init="contactanos.IniciarVariable()">
+    <aside class="col-xs-12">
+            <aside class="servicios">
+                <sub>Contactanos</sub>
+                <hr>
+               <h2> Maneje su proyecto con profesionales</h2>
+             </aside>
+    
+            <aside class="row nuestra-direccion">
+                <div class="nuestra-direccion-item">
+                    <div class="icon-item-nuestra-direccion">
+                        <span class="icon-map-marker ico-span"></span>
+                    </div>
+                    <h3>Dirección</h3>
+                        <p>Carretera la Isla KM. 1, Colonia Miguel Hidalgo III, 86127. <br>Villahermosa, Tab. México</p>
+                </div>
+                <div class="nuestra-direccion-item">
+                    <div class="icon-item-nuestra-direccion">
+                        <span class="icon-volume-control-phone ico-span"></span>
+                    </div>
+                    <h3>Télefono</h3>
+                        <p>(993) 297-8171<br>(993) 171-3869<br></p>
+                </div>
+                <div class="nuestra-direccion-item">
+                   <div class="icon-item-nuestra-direccion">
+                        <span class="icon-envelope ico-span"></span>
+                    </div>
+                    <h3>Correo</h3>
+                        <p>sediap42_36@hotmail.com<br></p>
+                </div>
+            </aside>
+
+            
+            <div class="row contacnos">
+                <aside class="maps">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1978.1218468211!2d-92.98552273961032!3d17.97970408907132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfe214d658d4879f3!2sCentro+de+Servicio+%22Sediap%22!5e0!3m2!1ses-419!2smx!4v1488836115593" style="width:100%;    box-shadow: rgba(0, 0, 0, 0.3) 0 0 13px;" height="620" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </aside>
+                <aside class="formularioContactanos">
+                    <div class="header-contactanos"><h4>Si tiene alguna pregunta, no dude en ponerse en contacto con nosotros</h4></div>
+                    <form class="formContactanos" name="contactoForm" ng-submit="contactanos.BtnEnviarCorreo()" novalidate>
+                        <div class="row">
+                            <div class="col-xs-12 rowFormulario">
+                                <span class="icon-user-circle span-icon"></span>
+                                <input type="text" placeholder="Nombre" name="nombre" ng-model="contactanos.mdlContactanos.nombre" ng-class="{'has-error':contactoForm.nombre.$invalid && !contactoForm.nombre.$pristine}" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                             <div class="col-xs-12 rowFormulario">
+                                  <span class="icon-envelope-o span-icon"></span>
+                                  <input type="email" placeholder="Correo" name="email" ng-model="contactanos.mdlContactanos.correo" ng-class="{'has-error':contactoForm.email.$invalid && !contactoForm.email.$pristine}" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                             <div class="col-xs-12 rowFormulario">
+                                 <span class="icon-phone span-icon"></span>
+                                <input type="text" placeholder="N. Teléfonico" name="celular" phone-input  ng-model="contactanos.mdlContactanos.telefono" min="8" ng-class="{'has-error':contactoForm.celular.$invalid && !contactoForm.celular.$pristine}"  required>
+                            </div>
+                        </div>
+                        <div class="row">
+                           <div class="col-xs-12 rowFormulario">
+                                 <span class="icon-bullhorn span-icon"></span>
+                                <input type="text" placeholder="Asunto" name="asunto" ng-model="contactanos.mdlContactanos.asunto" ng-class="{'has-error':contactoForm.asunto.$invalid && !contactoForm.asunto.$pristine}" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs-12 rowFormulario">
+                                <span class="icon-comment-o span-icon"></span>
+                                <textarea name="mensaje" placeholder="Ingrese su mensaje" rows="6" ng-model="contactanos.mdlContactanos.mensaje" ng-minlength="15" ng-class="{'has-error':contactoForm.mensaje.$invalid && !contactoForm.mensaje.$pristine && contactoForm.mensaje.$error.minlength}" required></textarea>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row start-xs">
+                            <div class="col-xs-12">
+                                <div class="loader" ng-if="!contactanos.btnActivo"></div>
+                                <button type="submit" class="special width-100" ng-disabled="contactoForm.$invalid" ng-if="contactanos.btnActivo">Enviar mensaje</button>
+                            </div>
+                        </div>
+                        <br>
+                    </form>
+                </aside>
+
+            </div>
+    </aside>
+</section>

@@ -4146,11 +4146,12 @@ header nav a p:hover{
 
 }
 .caption-style-3 .blur{
-    background-color: #EFC34A;
-    height: 300px;
-    width: 288px;
-    z-index: 5;
-    position: absolute;
+  background-color: #EFC34A;
+      height: 70px;
+      width: 288px;
+      z-index: 5;
+      position: absolute;
+      top: 0px;
 }
 
 .caption-style-3 .caption-text h2{
